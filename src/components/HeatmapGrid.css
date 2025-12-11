@@ -1,0 +1,82 @@
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 110px), 1fr));
+  gap: 8px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Extra large screens - more columns */
+@media (min-width: 1920px) {
+  .heatmap-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    padding: 12px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .heatmap-grid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 8px;
+    padding: 10px;
+  }
+}
+
+/* Medium screens - tablets landscape */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .heatmap-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+    padding: 10px;
+  }
+}
+
+/* Small screens - tablets portrait */
+@media (min-width: 480px) and (max-width: 767px) {
+  .heatmap-grid {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 6px;
+    padding: 8px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 479px) {
+  .heatmap-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 6px;
+    padding: 6px;
+  }
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 16px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+}

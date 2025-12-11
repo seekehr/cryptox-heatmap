@@ -1,0 +1,150 @@
+.coin-tile {
+  border-radius: 6px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 90px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.coin-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.coin-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.coin-image {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.coin-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.coin-symbol {
+  font-weight: 700;
+  font-size: 12px;
+  color: white;
+}
+
+.coin-rank {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.coin-price {
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  margin-top: auto;
+}
+
+.coin-change {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.coin-change .positive {
+  color: #4ade80;
+}
+
+.coin-change .negative {
+  color: #f87171;
+}
+
+/* Color classes based on price change */
+.coin-tile.strong-gain {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+}
+
+.coin-tile.gain {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+}
+
+.coin-tile.neutral {
+  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+}
+
+.coin-tile.loss {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+}
+
+.coin-tile.strong-loss {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+/* Responsive sizing for smaller screens */
+@media (max-width: 767px) {
+  .coin-tile {
+    min-height: 80px;
+    padding: 6px;
+  }
+
+  .coin-image {
+    width: 18px;
+    height: 18px;
+  }
+
+  .coin-symbol {
+    font-size: 11px;
+  }
+
+  .coin-rank {
+    font-size: 8px;
+  }
+
+  .coin-price {
+    font-size: 11px;
+  }
+
+  .coin-change {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 479px) {
+  .coin-tile {
+    min-height: 75px;
+    padding: 5px;
+    gap: 3px;
+  }
+
+  .coin-image {
+    width: 16px;
+    height: 16px;
+  }
+
+  .coin-symbol {
+    font-size: 10px;
+  }
+
+  .coin-rank {
+    font-size: 7px;
+  }
+
+  .coin-price {
+    font-size: 10px;
+  }
+
+  .coin-change {
+    font-size: 11px;
+  }
+
+  .coin-header {
+    gap: 4px;
+  }
+}
